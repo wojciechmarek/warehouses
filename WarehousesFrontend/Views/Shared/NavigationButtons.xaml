@@ -1,0 +1,51 @@
+﻿<Page x:Class="WarehousesFrontend.Views.Shared.NavigationButtons"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WarehousesFrontend.Views.Shared"
+      mc:Ignorable="d" 
+      Title="NavigationButtons">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Column="0">
+            <Button.Content>
+                <StackPanel>
+                    <Image Source="/Images/today.png" Stretch="Uniform" Height="35"/>
+                    <Label Content="Aktualne dane" FontWeight="Bold"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+        <Button Grid.Column="1">
+            <Button.Content>
+                <StackPanel>
+                    <Image Source="/Images/last24.png" Stretch="Uniform" Height="35"/>
+                    <Label Content="Ostatnie 24 h" FontWeight="Bold"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+        <Button Grid.Column="2">
+            <Button.Content>
+                <StackPanel>
+                    <Image Source="/Images/last7.png" Stretch="Uniform" Height="35"/>
+                    <Label Content="Ostatnie 7 dni" FontWeight="Bold"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+        <Button Grid.Column="3">
+            <Button.Content>
+                <StackPanel>
+                    <Image Source="/Images/logout.png" Stretch="Uniform" Height="35"/>
+                    <Label Content="Wyloguj się" FontWeight="Bold"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+    </Grid>
+</Page>
