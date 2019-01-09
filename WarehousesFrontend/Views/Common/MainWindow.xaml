@@ -23,7 +23,7 @@
             <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
 
-        <Frame Grid.Row="0" Source="/Views/Shared/Actual.xaml" Background="#888" NavigationUIVisibility="Hidden"/>
+        <Frame Grid.Row="0" Content="{Binding PageForFrame}" Background="#888" NavigationUIVisibility="Hidden"/>
 
         <Frame Grid.Row="1" Source="/Views/Shared/NavigationButtons.xaml" NavigationUIVisibility="Hidden" Background="#aaa"/>
     </Grid>

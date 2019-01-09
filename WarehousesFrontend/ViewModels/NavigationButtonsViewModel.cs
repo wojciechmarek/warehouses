@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Messaging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,22 +25,37 @@ namespace WarehousesFrontend.ViewModels
             switch (x)
             {
                 case "today":
+                    ChangeToActualView();
                     break;
 
                 case "last24":
+                    ChangeToLast24HoursView();
                     break;
 
                 case "last7":
+                    ChangeToLast7DaysView();
                     break;
 
                 case "logout":
                     LogoutUser();
                     break;
 
-
-
-
             }
+        }
+
+        private void ChangeToLast7DaysView()
+        {
+            Messenger.Default.Send<string>("7days");
+        }
+
+        private void ChangeToLast24HoursView()
+        {
+            Messenger.Default.Send<string>("24hours");
+        }
+
+        private void ChangeToActualView()
+        {
+            Messenger.Default.Send<string>("actual");
         }
 
         private void LogoutUser()

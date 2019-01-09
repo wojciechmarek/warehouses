@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WarehousesFrontend.Views.Common"
         xmlns:ViewModels="clr-namespace:WarehousesFrontend.ViewModels" x:Class="WarehousesFrontend.Views.Common.LoginWindow"
         mc:Ignorable="d"
-        Height="200" Width="300"
+        Height="300" Width="400" MaxHeight="300" MaxWidth="400"
         ResizeMode="NoResize" WindowStyle="ToolWindow"
         Title="Logowanie"
         Background="#aeaeae"
@@ -16,8 +16,12 @@
 
 
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-        <TextBox Text="{Binding LoginInput}" Height="30" Width="200" Margin="0,2" TextAlignment="Center" FontSize="20"/>
-        <TextBox Text="{Binding PasswordInput}" Height="30" Width="200" Margin="0,2" TextAlignment="Center" FontSize="20"/>
-        <Button Command="{Binding LoginButton}" Height="40" Background="LightGreen" Content="Zaloguj" Margin="0,10,0,0"/>
+        <Label Content="Login:"/>
+        <TextBox Text="{Binding LoginInput}" Height="30" Width="200" Margin="0" TextAlignment="Center" FontSize="20"/>
+
+        <Label Content="Password:" Margin="0,10,0,0"/>
+        <TextBox Text="{Binding PasswordInput}"  Height="30" Width="200" Margin="0,2" TextAlignment="Center" FontSize="20"/>
+        
+        <Button Command="{Binding LoginButton}" Height="50" Width="200" Background="LightGreen" Content="Zaloguj" Margin="0,20,0,0"/>
     </StackPanel>
 </Window>
