@@ -3,7 +3,6 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:WarehousesFrontend.Views.Shared"
       xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
       xmlns:ViewModels="clr-namespace:WarehousesFrontend.ViewModels" x:Class="WarehousesFrontend.Views.Shared.Actual"
       mc:Ignorable="d" 

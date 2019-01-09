@@ -9,15 +9,15 @@ namespace WarehousesFrontend.Services
     public class Service : IService
     {
         /// <summary>
-        /// Here we return 24 last record(it is mean of all hour)
+        /// Here we return 25 last record(it is mean of all hour)
         /// </summary>
         /// <returns></returns>
-        public List<double> Get24HoursAgoData()
+        public List<double> Get24HoursAgoData() //must be 24+1 records
         {
             Random rand = new Random();
             List<double> data = new List<double>();
 
-            for (int i = 0; i < 24; i++)
+            for (int i = 0; i < 25; i++)
             {
                 data.Add(rand.Next(-10, -5));
             }
@@ -26,15 +26,15 @@ namespace WarehousesFrontend.Services
         }
 
         /// <summary>
-        /// Here we return 7 last record(it is mean of all day)
+        /// Here we return 8 last record(it is mean of all day)
         /// </summary>
         /// <returns></returns>
-        public List<double> Get7DaysAgoData()
+        public List<double> Get7DaysAgoData() //must be 7+1 records
         {
             Random rand = new Random();
             List<double> data = new List<double>();
 
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 8; i++)
             {
                 data.Add(rand.Next(-10, -5));
             }
@@ -44,15 +44,15 @@ namespace WarehousesFrontend.Services
 
 
         /// <summary>
-        /// Here we will return only 10 last records
+        /// Here we will return only 11 last records
         /// </summary>
         /// <returns></returns>
-        public List<double> GetActualData()
+        public List<double> GetActualData() //must be 10+1 records
         {
             Random rand = new Random();
             List<double> data = new List<double>();
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 11; i++)
             {
                 data.Add(rand.Next(-10, -5));
             }

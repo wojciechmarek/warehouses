@@ -8,7 +8,11 @@
         xmlns:ViewModels="clr-namespace:WarehousesFrontend.ViewModels" x:Class="WarehousesFrontend.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="800" MinHeight="450" MinWidth="700"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        >
+    <Window.DataContext>
+        <ViewModels:ChartPagesViewModel/>
+    </Window.DataContext>
 
 
     <Grid>

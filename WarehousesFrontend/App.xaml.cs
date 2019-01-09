@@ -13,5 +13,11 @@ namespace WarehousesFrontend
     /// </summary>
     public partial class App : Application
     {
+
+
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            StartupUri = new Uri("Views/Common/LoginWindow.xaml", UriKind.Relative);
+        }
     }
 }

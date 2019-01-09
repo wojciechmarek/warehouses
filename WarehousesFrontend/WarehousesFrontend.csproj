@@ -65,14 +65,20 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="CommonVariables.cs" />
     <Compile Include="DependencyInjection.cs" />
     <Compile Include="Services\IServices.cs" />
     <Compile Include="Services\Services.cs" />
     <Compile Include="ViewModels\ActualViewModel.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\ChartPagesViewModel.cs" />
     <Compile Include="ViewModels\Last24ViewModel.cs" />
     <Compile Include="ViewModels\Last7ViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\NavigationButtonsViewModel.cs" />
+    <Compile Include="Views\Common\LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Shared\Actual.xaml.cs">
       <DependentUpon>Actual.xaml</DependentUpon>
     </Compile>
@@ -85,6 +91,10 @@
     <Compile Include="Views\Shared\NavigationButtons.xaml.cs">
       <DependentUpon>NavigationButtons.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\Common\LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Common\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

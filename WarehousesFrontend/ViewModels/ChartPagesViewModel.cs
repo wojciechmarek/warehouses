@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using WarehousesFrontend.Views.Common;
 using WarehousesFrontend.Views.Shared;
 
 namespace WarehousesFrontend.ViewModels
@@ -12,6 +13,7 @@ namespace WarehousesFrontend.ViewModels
     public class ChartPagesViewModel
     {
         private ObservableCollection<Page> pages;
+        LoginWindow loginWindow;
 
         public ObservableCollection<Page> Pages
         {
@@ -22,7 +24,9 @@ namespace WarehousesFrontend.ViewModels
 
         public ChartPagesViewModel()
         {
-            pages.Add(new Actual());
+            //pages.Add(new Actual());
         }
+
+        
     }
 }

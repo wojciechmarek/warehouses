@@ -9,20 +9,23 @@ using System.Windows.Documents;
 using System.Windows.Controls;
 using System.Windows.Media;
 using WarehousesFrontend.Services;
+using WarehousesFrontend.Views.Common;
 
 namespace WarehousesFrontend.ViewModels
 {
-    public partial class ActualViewModel
+    public class ActualViewModel
     {
-        private IService _services { get; set; }
 
         public SeriesCollection SeriesCollection { get; set; }
         public string[] Labels { get; set; }
         public Func<double, string> YFormatter { get; set; }
+        Service _services;
 
-        public ActualViewModel(IService service)
+
+        public ActualViewModel()
         {
-            _services = service;
+
+            _services = new Service();
 
             SeriesCollection = new SeriesCollection
             {
@@ -34,7 +37,7 @@ namespace WarehousesFrontend.ViewModels
 
             };
 
-            Labels = new[] { "Jan", "Feb", "Mar", "Apr", "May" };
+            Labels = new[] { "Jan", "Feb", "Mar", "Apr", "May","Jan", "Feb", "Mar", "Apr", "May" };
             YFormatter = value => value.ToString("C");
 
 

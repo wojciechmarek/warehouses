@@ -33,12 +33,19 @@ namespace WarehousesFrontend.ViewModels
                     break;
 
                 case "logout":
+                    LogoutUser();
                     break;
 
 
 
 
             }
+        }
+
+        private void LogoutUser()
+        {
+            System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
+            Application.Current.Shutdown();
         }
     }
 }
