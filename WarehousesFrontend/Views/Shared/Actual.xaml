@@ -8,7 +8,8 @@
       xmlns:ViewModels="clr-namespace:WarehousesFrontend.ViewModels" x:Class="WarehousesFrontend.Views.Shared.Actual"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Actual">
+      Title="Actual"
+      WindowTitle="Aktualne dane">
 
     <Page.DataContext>
         <ViewModels:ActualViewModel/>

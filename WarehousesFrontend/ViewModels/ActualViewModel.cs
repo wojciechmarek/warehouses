@@ -8,21 +8,28 @@ using System.Threading.Tasks;
 using System.Windows.Documents;
 using System.Windows.Controls;
 using System.Windows.Media;
-
+using WarehousesFrontend.Services;
 
 namespace WarehousesFrontend.ViewModels
 {
     public partial class ActualViewModel
     {
-        public ActualViewModel()
+        private IService _services { get; set; }
+
+        public SeriesCollection SeriesCollection { get; set; }
+        public string[] Labels { get; set; }
+        public Func<double, string> YFormatter { get; set; }
+
+        public ActualViewModel(IService service)
         {
+            _services = service;
 
             SeriesCollection = new SeriesCollection
             {
                 new LineSeries
                 {
                     Title = "Temperatura",
-                    Values = new ChartValues<double> { 4, 6, 5, 2 ,4 }
+                    Values = new ChartValues<double>(_services.GetActualData()),
                 }
 
             };
@@ -37,8 +44,6 @@ namespace WarehousesFrontend.ViewModels
 
         }
 
-        public SeriesCollection SeriesCollection { get; set; }
-        public string[] Labels { get; set; }
-        public Func<double, string> YFormatter { get; set; }
+        
     }
 }
