@@ -38,7 +38,7 @@ namespace WarehousesFrontend.ViewModels
 
         private void CountTemperatures()
         {
-            MeanTemperature = _services.Get24HoursAgoData().Average();
+            MeanTemperature = Math.Round(_services.Get24HoursAgoData().Average() ,1);
             MinTemperature = _services.Get24HoursAgoData().Min();
             MaxTemperature = _services.Get24HoursAgoData().Max();
 

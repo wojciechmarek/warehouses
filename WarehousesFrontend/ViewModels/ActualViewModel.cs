@@ -41,7 +41,7 @@ namespace WarehousesFrontend.ViewModels
 
         private void CountTemperatures()
         {
-            MeanTemperature = _services.GetActualData().Average();
+            MeanTemperature = Math.Round( _services.GetActualData().Average() , 1);
             MinTemperature = _services.GetActualData().Min();
             MaxTemperature = _services.GetActualData().Max();
 

@@ -24,7 +24,7 @@ namespace WarehousesFrontend.ViewModels
 
         Service _services;
 
-        public Last7ViewModel(IService services)
+        public Last7ViewModel()
         {
             _services = new Service();
 
@@ -32,13 +32,12 @@ namespace WarehousesFrontend.ViewModels
             InitializeLabels();
             CountTemperatures();
 
-
             YFormatter = value => value.ToString("#.#");
         }
 
         private void CountTemperatures()
         {
-            MeanTemperature = _services.Get7DaysAgoData().Average();
+            MeanTemperature = Math.Round( _services.Get7DaysAgoData().Average(), 1);
             MinTemperature = _services.Get7DaysAgoData().Min();
             MaxTemperature = _services.Get7DaysAgoData().Max();
         }
@@ -49,7 +48,7 @@ namespace WarehousesFrontend.ViewModels
 
             for (int i = 0; i < 7; i++)
             {
-                Labels[6 - i] = DateTime.Now.AddDays(-i).ToShortTimeString();
+                Labels[6 - i] = DateTime.Now.AddDays(-i).ToShortDateString();
             }
 
 
